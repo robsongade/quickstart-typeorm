@@ -1,13 +1,9 @@
 const rootDir = (process.env.NODE_ENV && process.env.NODE_ENV == "production") ? 'build' : 'src'
 const ext = (process.env.NODE_ENV && process.env.NODE_ENV == "production") ? 'js' : 'ts'
-const URL_DATABASE = "";
+const DATABASE_URL = process.env.DATABASE_URL;
 module.exports = {
    "type": "postgres",
-   "host": "localhost",
-   "port": 5432,
-   "username": "postgres",
-   "password": "root",
-   "database": "quickstart",
+   "url" : DATABASE_URL,
    "synchronize": true,
    "logging": false,
    "entities": [
