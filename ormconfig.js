@@ -4,7 +4,7 @@ const DATABASE_URL = process.env.HOST_DATABASE_URL || process.env.DATABASE_URL;
 module.exports = {
    "type": "postgres",
    "url" : DATABASE_URL,
-   "synchronize": false,
+   "synchronize": process.env.AUTO_SYNC || false,
    "logging": false,
    "entities": [
       rootDir + "/entity/**/*."+ext
