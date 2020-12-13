@@ -1,6 +1,6 @@
 const rootDir = (process.env.NODE_ENV && process.env.NODE_ENV == "production") ? 'build' : 'src'
 const ext = (process.env.NODE_ENV && process.env.NODE_ENV == "production") ? 'js' : 'ts'
-const DATABASE_URL = process.env.DATABASE_URL;
+const DATABASE_URL = process.env.HOST_DATABASE_URL || process.env.DATABASE_URL;
 module.exports = {
    "type": "postgres",
    "url" : DATABASE_URL,
