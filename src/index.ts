@@ -5,7 +5,9 @@ import * as bodyParser from "body-parser";
 import {Request, Response} from "express";
 import {Routes} from "./routes";
 import {User} from "./entity/User";
-require("dotenv")
+const dotenv = require("dotenv")
+
+dotenv.config()
 
 createConnection().then(async connection => {
 

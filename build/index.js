@@ -42,7 +42,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var routes_1 = require("./routes");
 var User_1 = require("./entity/User");
-require("dotenv");
+var dotenv = require("dotenv");
+dotenv.config();
 typeorm_1.createConnection().then(function (connection) { return __awaiter(void 0, void 0, void 0, function () {
     var app, port, user;
     return __generator(this, function (_a) {
