@@ -16,7 +16,8 @@
       "typeorm": "0.2.29"
    },
    "scripts": {
-      "dev": "ts-node src/index.ts",
-      "start": "node build/index.js"
+      "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/index.ts",
+      "start": "set NODE_ENV=production&&node build/index.js",
+      "build": "tsc"
    }
 }
